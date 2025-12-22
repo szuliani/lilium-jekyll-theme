@@ -1,0 +1,25 @@
+<div class="sidebar">
+    <div>
+        <h3>About {{ site.title }}</h2>
+        <p>{{ site.description }}</p>
+    </div>
+
+    <div>
+        <h3>{{ site.author.name }}</h2>
+        <p>{{ site.author.bio }}</p>
+
+        {%- if site.social_links -%}
+        <p>My links:</p>
+        
+        <ul class="links">
+        {%- for entry in site.social_links -%}
+        <li>
+            <a rel="me" href="{{ entry.url }}" target="_blank" title="{{ entry.title }}">{{ entry.title }}</a>
+        </li>
+        {%- endfor -%}
+        <li><a href="{{ site.baseurl }}/feed.xml">Feed RSS</a></li>
+        </ul>
+        {%- endif -%}
+    </div>
+</div>
+

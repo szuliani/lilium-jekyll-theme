@@ -1,25 +1,54 @@
-title: Lilium Digital Garden
-include: ['_pages']
-baseurl: ''
+title: Lilium
+url: https://github.com/szuliani/lilium-jekyll-theme/
+author:
+  name: Stefano Zuliani
+  email: your-email@domain.com
+  bio: Hi, my name is Stefano.
 
-permalink: pretty
-relative_permalinks: false
+tagline: A simple blog theme for Jekyll
+description: >
+  Write an awesome description for your new site here. You can edit this line
+  in _config.yml. It will appear in your document head meta (for Google search
+  results) and in your feed.xml site description.
+
+lilium:
+  # date format. The default value is "%b %d, %Y" (e.g. Nov 14, 2023).
+  #   Refer to https://shopify.github.io/liquid/filters/date/ for valid values.
+  date_format: "%b %d, %Y"
+  home_post_to_display: 6
+  footer_text: 'Made with 💚 by <a href="https://zulianis.eu">Stefano Zuliani</a>. Available under <a href="https://opensource.org/licenses/MIT">MIT License</a>.'
 
 plugins:
-  - jekyll-last-modified-at
+  - jekyll-feed
+  - jekyll-sitemap
   - jekyll-seo-tag
 
-collections:
-  notes:
-    output: true
-    permalink: /_notes/:slug
+
+# theme: minima
+
+  # Specific pages for site navigation.
+  #   If you wish to link only specific pages in the site-navigation, use this and list
+  #   the `path` property (as represented via Liquid) of the pages in the order they
+  #   should be rendered.
+#  nav_pages:
+#    - about.md
+
+
+social_links:
+  - title: Jekyll @ GitHub
+    url: "https://github.com/jekyll/"
+  - title: Jekyll @ X
+    url: "https://x.com/jekyllrb"
+
 
 defaults:
-  - scope:
-      path: "**/*"
+  -
+    scope:
+      path: "_posts"
     values:
-      layout: "default"
-  - scope:
-      path: "_notes/**/*.md"
-    values:
-      layout: "note"
+      type: "post"
+      layout: "post"
+      img: ""
+
+sass:
+  sass_dir: _sass

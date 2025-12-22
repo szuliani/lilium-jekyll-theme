@@ -1,0 +1,72 @@
+---
+layout: default
+---
+
+<h1>Welcome to {{site.title}}!</h1>
+
+{%- if content %}
+  {{ content }}
+{%- endif %}
+
+<h2 class="archive-title">Latest posts</h2>
+
+<div class="archive-grid">
+
+  {% assign posts = site.posts %}
+  {%- if posts.size > 0 -%}
+    <ul class="post-list">
+      {% assign count = 0 %}
+      {%- assign date_format = site.lilium.date_format | default: "%b %-d, %Y" -%}
+      {%- for post in posts offset: offset_posts -%}
+      <li style="background-image: url('{{ post.img }}');">
+        <div class="overlay">
+          <span class="post-date">{{ post.date | date: date_format }}</span>
+          <h4>
+            <a class="" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </h4>
+          <!-- <span class="post-taxonomies">{{ post.categories }} > {{ post.tags }} </span> -->
+          <div>
+            <span class="post-taxonomies">{%- for cat_name in post.categories %}
+              <a href="categories/#{{cat_name}}">#{{ cat_name }}</a>
+            {%- endfor %}</span>
+            <!-- <span class="post-taxonomies">{%- for tag_name in post.tags %}
+              {{ tag_name }}<span class="separator">, </span>
+            {%- endfor %}</span> -->
+          </div>
+        </div>
+      </li>
+      {% assign count = count | plus:1 %}
+      {% if count == site.lilium.home_post_to_display %}{% break %}
+      {% endif %}
+      {%- endfor -%}
+    </ul>
+  {%- endif %}
+</div>
+
+<!-- SOLO 9 -->
+
+{%- if site.categories %}
+  <div id="categories-list" class="listing">
+    <h2>Categories</h2>
+    <ul>
+    {% for category in site.categories %}
+      {% capture category_name %}{{ category | first }}{% endcapture %}
+      <li><a href="categories/#{{category_name}}">#{{ category_name }}</a></li>
+    {% endfor %}
+    </ul>
+  </div>
+{%- endif %}
+
+<!-- {%- if site.tags %}
+  <div id="tags-list" class="listing">
+    <h2>Tags</h2>
+    <ul>
+    {% for tag in site.tags %}
+      {% capture tag_name %}{{ tag | first }}{% endcapture %}
+      <li>{{ tag_name }}</li>
+    {% endfor %}
+    </ul>
+  </div>
+{%- endif %} -->

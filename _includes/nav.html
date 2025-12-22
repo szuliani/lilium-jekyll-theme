@@ -1,7 +1,12 @@
 <div>
-    <a class="topmenu" href="/_pages/about.md">About</a>
-    <a class="topmenu" href="/seeds/">🌱 Seeds</a>
-    <a class="topmenu" href="/docs/lilium1.md">Documents</a>
-    <a class="topmenu" href="https://github.com/crixer18/lilium-digital-garden-jekyll">
-        Download Lilium</a>
+    <a class="topmenu" href="{{ site.url }}">Home</a>
+    {%- if "about.md" -%}
+        <a class="topmenu" href="{{ site.baseurl }}/about">About</a>
+    {%- endif -%}
+    {%- if "archive.md" -%}
+        <a class="topmenu" href="{{ site.baseurl }}/archive/">Archive</a>
+    {%- endif -%}
+    {%- if "categories.md" -%}
+        <a class="topmenu" href="{{ site.baseurl }}/categories/">Categories</a>
+    {%- endif -%}
 </div>

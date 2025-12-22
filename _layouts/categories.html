@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<h1>Categories</h1>
+
+<div id="archives">
+  <div class="listing">
+    {% for category in site.categories %}
+    {% capture category_name %}{{ category | first }}{% endcapture %}
+    <h2 id="{{ category_name | slugize }}">{{ category_name }}</h2>
+    {%- assign date_format = site.lilium.date_format | default: "%b %-d, %Y" -%}
+    <ul>
+      {% for post in site.categories[category_name] %}
+      <li>
+        <span class="post-date">{{ post.date | date: date_format }} - </span>
+        <strong><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}} ></a></strong>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+
+  </div>
+</div>

@@ -1,0 +1,54 @@
+.sidebar
+    height: auto
+    max-width: 330px
+    position: fixed
+    z-index: 1
+    bottom: 0
+    right: 0
+    background-color: transparent
+    overflow-x: hidden
+    text-align: right
+    padding-right: 30px
+    padding-bottom: 20px
+    a
+        color: $text-color
+        background-color: $secondary-color
+        border-radius: 5px
+        padding-left: 5px
+        padding-right: 5px
+        border-bottom: solid 2px $highlights-color-2
+        text-decoration: none
+        &:hover
+            text-decoration: none
+            border-bottom: solid 2px $highlights-color-1
+            background-color: $primary-color
+            transition: all .7s
+    h3
+        font-family: $font-display
+        font-weight: 400
+        font-size: 1.1em
+        color: $primary-color
+        margin: 10px
+    p
+        font-family: $font-text
+        line-height: 1.4
+        font-size: .9em
+        color: $primary-color
+
+    .links
+        padding: 0px
+        li
+            font-size: .9em
+            margin: 5px 0px
+            list-style: none
+
+
+@media screen and (max-width: 1050px)
+    .sidebar
+        position: relative
+        max-width: 1050px
+        padding-top: 15px
+        padding-right: 3%
+        padding-left: 3%
+        text-align: center
+        border-top: solid 2px $secondary-color

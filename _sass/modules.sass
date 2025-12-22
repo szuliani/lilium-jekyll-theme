@@ -1,0 +1,70 @@
+input.task-list-item-checkbox
+  margin-right: 10px
+
+footer
+  margin-top: 80px
+  color: $primary-color
+
+
+/** Archives style **/
+
+h2.archive-title
+  margin: 60px auto 40px
+
+ul.post-list
+  list-style: none
+  padding: 0px
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  gap: 15px
+
+  li
+    flex-grow: 1
+    min-width: 200px
+    width: 20%
+    border-radius: 10px
+    background-position: center
+    background-size: cover
+    box-shadow: 0px 0px 5px #ccc
+
+    .overlay
+      background-color: #fafaf2b7
+      width: auto
+      height: -webkit-fill-available
+      padding: 20px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+
+      .post-date
+        font-size: .8em
+      .post-taxonomies
+        font-size: .9em
+      h4
+        font-family: $font-display
+        margin: 10px 0px
+        line-height: 1.2em
+        a
+          color: $highlights-color-1
+
+
+#categories-list
+  margin: 60px auto
+
+#tags-list ul, #categories-list ul
+  columns: 3
+  list-style: none
+  padding: 0px
+
+.post-taxonomies .separator:last-of-type
+  display: none
+
+.listing a
+  background-color: transparent
+  border-bottom: transparent
+  padding-left: 0px
+  padding-right: 0px
+  &:hover
+    background-color: transparent
+    border: transparent

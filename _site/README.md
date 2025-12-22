@@ -1,10 +1,51 @@
-# Lilium Digital Garden
+# Lilium
+
+Welcome to **Lilium theme** for [Jekyll](https://jekyllrb.com/). This template is designed for a smooth garden-like blogging experience 🌱
+
+> [!WARNING]
+> Although this used to be a full digital garden theme, now I reduced the functions due developing and maintaining difficulties. Graphs are no longer supported but you can use it for digital gardening anyway and you can add plugins for semantic blogging.
+
+🇬🇧 Also, for now Lilium theme is only available in english.
 
 
-Hi! Welcome to **Lilium Didital Garden** template for Jekyll. This template is made to help you build your first digital garden using [Jekyll](https://jekyllrb.com/) notes. 🌱
+![Lilium Jekyll Theme](/imgs/Lilium-snippet.png)
 
-![Lilium Digital Garden](/imgs/lilium.png)
 
-If you don't know were to start, you can [take a look at Lilium Digital Garden template](https://lilium-digital-garden-jekyll.vercel.app/) oh [read the instructions to set pu your first digital garden](https://lilium-digital-garden-jekyll.vercel.app/docs/lilium1).
+## Installation
 
-Template available under [MIT License](_site/LICENSE).
+Add this line to your Jekyll site's `Gemfile`:
+
+```ruby
+gem "lilium-jekyll-theme"
+```
+
+And add this line to your Jekyll site's `_config.yml`:
+
+```yaml
+theme: lilium-jekyll-theme
+```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install lilium-jekyll-theme
+
+
+## Usage
+
+Manage general information from `_config.yml`, such as name, contacts, social links, number of posts to be displayed in the homepage (the grid down here).
+
+Access to your whole posts archive by creating a page with the `layout: archive` and a page with the list of your posts' categories with the `layout: categories`.
+
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/szuliani/lilium-jekyll-theme. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
+
+
+## License
+
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).

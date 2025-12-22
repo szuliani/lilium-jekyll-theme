@@ -1,0 +1,79 @@
+{%- if page.path != "index.md" -%}
+  {%- if page.title %}
+    <h1>{{ page.title }}</h1>
+  {%- else %}
+    <h1>Archive</h1>
+  {%- endif -%}
+{%- endif -%}
+
+<div class="archive-grid">
+  
+  {% if site.paginate %}
+    {% assign posts = paginator.posts %}
+  {% else %}
+    {% assign posts = site.posts %}
+  {% endif %}
+
+
+  {%- if posts.size > 0 -%}
+    <!-- {%- if page.list_title -%}
+      <h2 class="post-list-heading">{{ page.list_title }}</h2>
+    {%- endif -%} -->
+    <ul class="post-list">
+      {%- assign date_format = site.lilium.date_format | default: "%b %-d, %Y" -%}
+      {%- for post in posts -%}
+      <li style="background-image: url('{{ post.img }}');">
+        <div class="overlay">
+          <span class="post-date">{{ post.date | date: date_format }}</span>
+          <h4>
+            <a class="" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </h4>
+          <!-- <span class="post-taxonomies">{{ post.categories }} > {{ post.tags }} </span> -->
+          <div>
+            <span class="post-taxonomies">{%- for cat_name in post.categories %}
+              <a href="categories/#{{cat_name}}">#{{ cat_name }}</a>
+            {%- endfor %}</span>
+            <!-- <span class="post-taxonomies">{%- for tag_name in post.tags %}
+              {{ tag_name }}<span class="separator">, </span>
+            {%- endfor %}</span> -->
+          </div>
+        </div>
+        <!-- {%- if site.minima.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%} -->
+        <!-- <a class="post-link" href="{{ post.url | relative_url }}">
+          Read >
+        </a> -->
+      </li>
+      {%- endfor -%}
+    </ul>
+
+    {% if site.paginate %}
+      <div class="pager">
+        <ul class="pagination">
+        {%- if paginator.previous_page %}
+          <li>
+            <a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page" title="Go to Page {{ paginator.previous_page }}">
+              {{ paginator.previous_page }}
+            </a>
+          </li>
+        {%- else %}
+          <li><div class="pager-edge">•</div></li>
+        {%- endif %}
+          <li><div class="current-page">{{ paginator.page }}</div></li>
+        {%- if paginator.next_page %}
+          <li>
+            <a href="{{ paginator.next_page_path | relative_url }}" class="next-page" title="Go to Page {{ paginator.next_page }}">
+              {{ paginator.next_page }}
+            </a>
+          </li>
+        {%- else %}
+          <li><div class="pager-edge">•</div></li>
+        {%- endif %}
+        </ul>
+      </div>
+    {%- endif %}
+  {%- endif -%}
+</div>
