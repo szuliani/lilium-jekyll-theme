@@ -16,7 +16,7 @@ Welcome to **Lilium theme** for [Jekyll](https://jekyllrb.com/). This template i
 Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem 'lilium-jekyll-theme', '~> 0.2.0'
+gem 'lilium-jekyll-theme', '~> 0.2.1'
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
