@@ -16,7 +16,7 @@ Welcome to **Lilium theme** for [Jekyll](https://jekyllrb.com/). This template i
 Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem "lilium-jekyll-theme"
+gem 'lilium-jekyll-theme', '~> 0.2.0'
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
@@ -38,7 +38,7 @@ Or install it yourself as:
 
 Manage general information from `_config.yml`, such as name, contacts, social links, number of posts to be displayed in the homepage (the grid down here).
 
-Access to your whole posts archive by creating a page with the `layout: archive` and a page with the list of your posts' categories with the `layout: categories`.
+Default is `layout: page` for pages and `layout: post` for posts. Access to your whole posts archive by creating a page with the `layout: archive` and a page with the list of your posts' categories with the `layout: categories`.
 
 
 ## Contributing

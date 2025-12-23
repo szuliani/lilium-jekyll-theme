@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    Lilium (0.2.0)
+    lilium-jekyll-theme (0.2.0)
       jekyll (~> 4.4)
 
 GEM
@@ -86,10 +86,10 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  Lilium!
   jekyll-feed (~> 0.17.0)
   jekyll-seo-tag
   jekyll-sitemap
+  lilium-jekyll-theme!
 
 BUNDLED WITH
    2.5.23

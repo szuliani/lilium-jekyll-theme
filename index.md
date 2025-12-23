@@ -1,5 +1,5 @@
 ---
-layout: homepage
+layout: home
 title: Lilium
 img: /imgs/Lilium-snippet.png
 ---
