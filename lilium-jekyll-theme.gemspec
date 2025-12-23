@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = "Lilium"
+  spec.name          = "lilium-jekyll-theme"
   spec.version       = "0.2.0"
   spec.authors       = ["Stefano Zuliani"]
   spec.email         = ["web@zulianis.eu"]
