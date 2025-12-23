@@ -33,6 +33,19 @@ Or install it yourself as:
 
     $ gem install lilium-jekyll-theme
 
+This teme requires [jekyll-seo-tag plugin](https://github.com/jekyll/jekyll-seo-tag). Please manually install it by adding the following to your site's Gemfile:
+
+```ruby
+gem 'jekyll-seo-tag'
+```
+
+Add the following to your site's _config.yml:
+
+```yaml
+plugins:
+  - jekyll-seo-tag
+```
+
 
 ## Usage
 
